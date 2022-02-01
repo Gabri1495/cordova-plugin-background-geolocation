@@ -7,6 +7,8 @@
  Differences to original version:
 
  1. new method isLocationEnabled
+ 
+ "Touch" file (Gabri1495)
  */
 
 var exec = require('cordova/exec');
