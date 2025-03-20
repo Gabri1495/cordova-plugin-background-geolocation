@@ -16,13 +16,18 @@ buildscript {
     }
 }
 
+// Rimosso jcenter() perché non più supportato dal 2021.
+// In data 20/03/2025 la compilazione andava in errore per "Could not find com.intentfilter:android-permissions:0.1.7", probabilmente il repository non era più funzionante.
+// Si punta quindi direttamente al repository.
 allprojects {
     repositories {
         maven {
             url 'https://maven.google.com/'
             name 'Google'
         }
-        jcenter()
+        maven {
+            url 'https://jcenter.bintray.com'
+        }
     }
 }
 
