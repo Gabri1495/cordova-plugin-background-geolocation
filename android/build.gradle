@@ -16,18 +16,20 @@ buildscript {
     }
 }
 
-// Rimosso jcenter() perché non più supportato dal 2021.
-// In data 20/03/2025 la compilazione andava in errore per "Could not find com.intentfilter:android-permissions:0.1.7", probabilmente il repository non era più funzionante.
-// Si punta quindi direttamente al repository.
 allprojects {
     repositories {
+        // In data 20/03/2025 la compilazione andava in errore per "Could not find com.intentfilter:android-permissions:0.1.7", probabilmente il repository non era più funzionante.
+        // A causa della deprecazione del jcenter, come indicato negli issues dopo elencati, bisogna cambiare i riferimenti.
+        // https://github.com/nishkarsh/android-permissions/issues/20
+        // https://github.com/transistorsoft/flutter_background_geolocation/issues/605
+        maven { 
+             url "https://repo1.maven.org/maven2/" 
+         }
         maven {
             url 'https://maven.google.com/'
             name 'Google'
         }
-        maven {
-            url 'https://jcenter.bintray.com'
-        }
+        jcenter()
     }
 }
 

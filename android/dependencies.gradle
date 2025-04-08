@@ -3,7 +3,11 @@ dependencies {
     compile 'com.github.tony19:logback-android:1.1.1-9'
     compile 'org.slf4j:slf4j-api:1.7.21'
     // android-permissions
-    compile('com.intentfilter:android-permissions:0.1.7') {
+    // In data 20/03/2025 la compilazione andava in errore per "Could not find com.intentfilter:android-permissions:0.1.7", probabilmente il repository non era più funzionante.
+    // A causa della deprecazione del jcenter, come indicato negli issues dopo elencati, bisogna cambiare i riferimenti.
+    // https://github.com/nishkarsh/android-permissions/issues/20
+    // https://github.com/transistorsoft/flutter_background_geolocation/issues/605
+    compile('io.github.nishkarsh:android-permissions:0.1.8') {
         exclude group: 'com.android.support', module: 'appcompat-v7'
     }
     // promises
