@@ -1,3 +1,5 @@
+<b>!!! Non dovrebbe più servire, dal momento che andrebbe aggiornato questo repository per supportare le ultime modifiche di Android, ma questo lavoro è già stato fatto da <a>https://github.com/HaylLtd/cordova-background-geolocation-plugin</a> !!!</b>
+
 # @mauron85/cordova-plugin-background-geolocation
 
 ## We're moving
